@@ -21,7 +21,7 @@ if(!$conn){
         $stmt = $conn ->prepare('INSERT INTO feedback_data(fname,lname,email,msg) VALUES(?,?,?,?)');
         $stmt->bind_param('ssss',$FirstName,$LastName,$Email,$msg);
         $stmt->execute();
-        include('thankyou.php');
+        include('successful.php');
         $stmt->store_result();
         $stmt->close();
         $conn->close();
